@@ -1,17 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links li');
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+    const menuToggle = document.getElementById('navbarNav');
+    const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
 
-   
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-
-
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                bsCollapse.toggle();
+            }
         });
     });
 });
