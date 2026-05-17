@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const navLinks = document.querySelectorAll('.nav-link');
     const menuToggle = document.getElementById('navbarNav');
     
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navLinks.forEach((l) => {
             l.addEventListener('click', () => {
+        
                 if (window.innerWidth < 992) {
                     bsCollapse.toggle();
                 }
