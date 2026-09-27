@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,10 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow-sm">
         <div class="container">
             <a class="navbar-brand logo" href="#">DaviPaulino.dev</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,19 +28,21 @@
         </div>
     </nav>
 
-    <header class="hero d-flex align-items-center justify-content-center text-center">
+    <header class="hero d-flex align-items-center justify-content-center text-center fade-in-section">
         <div class="container">
             <h1 class="display-4 fw-bold">Olá, eu sou <span class="highlight">Davi Paulino Conceição</span></h1>
-            <h2 class="h4 mb-4">Estudante de Ciência da Computação</h2>
-            <p class="lead mb-5">Apenas querendo compartilhar tudo o que eu faço sobre tecnologia, e querendo rechear a minha carreira e profissão.</p>
+            <h2 class="h4 mb-4 text-secondary">Estudante de Ciência da Computação</h2>
+            <p class="lead mb-5 max-w-custom mx-auto">Apenas querendo compartilhar tudo o que eu faço sobre tecnologia, e querendo rechear a minha carreira e profissão.</p>
             <div class="d-flex gap-3 justify-content-center flex-wrap">
                 <a href="#projetos" class="btn btn-primary px-4 py-2">Ver Projetos</a>
-                <a href="https://github.com/DaviP-Conceicao" target="_blank" class="btn btn-outline-light px-4 py-2"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/DaviP-Conceicao" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light px-4 py-2" aria-label="Acessar meu GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </div>
     </header>
 
-    <section id="sobre" class="section py-5">
+    <section id="sobre" class="section py-5 fade-in-section">
         <div class="container text-center">
             <h2 class="section-title mb-4">Sobre Mim</h2>
             <div class="row justify-content-center">
@@ -52,14 +54,33 @@
         </div>
     </section>
 
-    <section id="projetos" class="section bg-alt py-5">
+    <section id="projetos" class="section bg-alt py-5 fade-in-section">
         <div class="container">
             <h2 class="section-title text-center mb-5">Portfólio de Projetos</h2>
             
-            <!-- Projetos Pessoais -->
+            
             <h3 class="category-title mb-4"><i class="fas fa-laptop-code me-2"></i> Projetos Pessoais</h3>
             <div class="row g-4 mb-5">
                 
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card h-100 p-4">
+                        <div class="card-header border-0 bg-transparent p-0">
+                            <span class="project-type d-block mb-2">Central de Informações</span>
+                            <i class="fas fa-database fa-2x mb-3 text-primary"></i>
+                            <h3>InfoHub</h3>
+                        </div>
+                        <div class="card-body p-0 mt-3">
+                            <p class="small text-secondary">Plataforma centralizada para gestão e partilha de informações. Desenvolvido com foco em escalabilidade e código limpo.</p>
+                            <div class="tech-stack mb-3">
+                                <span class="badge rounded-pill bg-primary-subtle text-primary">HTML/CSS</span>
+                                <span class="badge rounded-pill bg-primary-subtle text-primary">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/DaviP-Conceicao/InfoHub" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card h-100 p-4">
                         <div class="card-header border-0 bg-transparent p-0">
@@ -68,12 +89,12 @@
                             <h3>Stealth Notes</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Dashboard para aplicativo de segurança pessoal disfarçado. Focado no combate à violência doméstica e feminicídio.</p>
+                            <p class="small text-secondary">Dashboard para aplicativo de segurança pessoal disfarçado. Focado no combate à violência doméstica e feminicídio.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">TypeScript</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Lovable</span>
                             </div>
-                            <a href="#" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -86,12 +107,12 @@
                             <h3>Lixo Zero Dashboard</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Dashboard de monitoramento de resíduos urbanos focado na prevenção de enchentes. Uma solução tecnológica criada para conscientizar.</p>
+                            <p class="small text-secondary">Dashboard de monitoramento de resíduos urbanos focado na prevenção de enchentes. Uma solução tecnológica criada para conscientizar.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Front-end</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Dashboard</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/lixo-zero-dashboard" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/lixo-zero-dashboard" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -104,12 +125,12 @@
                             <h3>App de Finanças</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Dashboard de aplicação de controle financeiro desenvolvida durante o Lab Vibe Coding da DIO.</p>
+                            <p class="small text-secondary">Dashboard de aplicação de controle financeiro desenvolvida durante o Lab Vibe Coding da DIO.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">JavaScript</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">CSS</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/dio-lab-vibe-coding-app-financas" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/dio-lab-vibe-coding-app-financas" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -122,12 +143,12 @@
                             <h3>The D.A.R.V.I.S Codex</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Repositório centralizado de estudos, scripts e automações em formato de códice tecnológico e conhecimento estruturado.</p>
+                            <p class="small text-secondary">Repositório centralizado de estudos, scripts e automações em formato de códice tecnológico e conhecimento estruturado.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Automação</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Documentação</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/The-D.a.r.v.is-Codex" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/The-D.a.r.v.is-Codex" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -140,12 +161,12 @@
                             <h3>Infra Monitoring Lab</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Laboratório prático focado em ferramentas de monitoramento de infraestrutura de TI, análise de métricas e gerenciamento de rede.</p>
+                            <p class="small text-secondary">Laboratório prático focado em ferramentas de monitoramento de infraestrutura de TI, análise de métricas e gerenciamento de rede.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Infraestrutura</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Monitoramento</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Infra-monitoring-lab" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Infra-monitoring-lab" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -158,12 +179,12 @@
                             <h3>Cloud Security Lab</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Ambiente de laboratório desenvolvido para práticas e testes de segurança em ambientes de nuvem (Cloud Computing).</p>
+                            <p class="small text-secondary">Ambiente de laboratório desenvolvido para práticas e testes de segurança em ambientes de nuvem (Cloud Computing).</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Cloud</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Segurança</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Cloud-Security-Lab-" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Cloud-Security-Lab-" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -176,12 +197,12 @@
                             <h3>Green Stack Audit</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Ferramenta focada na auditoria e análise de pilhas tecnológicas para avaliação de eficiência energética e sustentabilidade de software.</p>
+                            <p class="small text-secondary">Ferramenta focada na auditoria e análise de pilhas tecnológicas para avaliação de eficiência energética e sustentabilidade de software.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Sustentabilidade</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Auditoria</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Grenn-Stack-Audit" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Grenn-Stack-Audit" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -194,26 +215,25 @@
                             <h3>Agente D.A.R.V.I.S.</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Agente de IA pessoal desenvolvido para automação de tarefas e gerenciamento avançado de conhecimento.</p>
+                            <p class="small text-secondary">Agente de IA pessoal desenvolvido para automação de tarefas e gerenciamento avançado de conhecimento.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">IA</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Automação</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Agente---D.A.R.V.I.R.S" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Agente---D.A.R.V.I.R.S" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="project-card future h-100 p-4">
-                        <i class="fas fa-plus-circle fa-2x text-muted"></i>
-                        <h3 class="text-muted">+ Projetos Futuramente</h3>
+                    <div class="project-card future h-100 p-4 d-flex flex-column align-items-center justify-content-center text-center">
+                        <i class="fas fa-plus-circle fa-2x text-muted mb-2"></i>
+                        <h3 class="text-muted h5 m-0">+ Projetos Futuramente</h3>
                     </div>
                 </div>
 
             </div>
 
-   
             <h3 class="category-title mb-4 mt-5"><i class="fas fa-graduation-cap me-2"></i> Projetos Acadêmicos</h3>
             <div class="row g-4 mb-5">
                 
@@ -225,12 +245,12 @@
                             <h3>Trabalho de Visão Computacional</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Projeto acadêmico focado em processing de imagens e extração de características usando técnicas de visão computacional e inteligência artificial.</p>
+                            <p class="small text-secondary">Projeto acadêmico focado em processing de imagens e extração de características usando técnicas de visão computacional e inteligência artificial.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Python</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">OpenCV</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Trabalho-VC" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Trabalho-VC" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -243,12 +263,12 @@
                             <h3>Modelagem UML & Java</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Estudo prático sobre diagramas de classes e implementação orientada a objetos.</p>
+                            <p class="small text-secondary">Estudo prático sobre diagramas de classes e implementação orientada a objetos.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Java</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">UML</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Modelagem-de-diagrama-de-Classes-Java-UML" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Modelagem-de-diagrama-de-Classes-Java-UML" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -261,12 +281,12 @@
                             <h3>Simulador de Árvore Sintática</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Simulação de árvores para análise de sintaxe abstrata.</p>
+                            <p class="small text-secondary">Simulação de árvores para análise de sintaxe abstrata.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Estrutura de Dados</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Algoritmos</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Simulador-de-rvore-Sint-tica-Abstratas" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Simulador-de-rvore-Sint-tica-Abstratas" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -279,12 +299,12 @@
                             <h3>CPRL Compiler Suite</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Suíte de desenvolvimento voltada para a arquitetura de compiladores CPRL. Focada na construção de analisadores léxicos, sintáticos e geração de código interpretável.</p>
+                            <p class="small text-secondary">Suíte de desenvolvimento voltada para a arquitetura de compiladores CPRL. Focada na construção de analisadores léxicos, sintáticos e geração de código interpretável.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Compiladores</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Análise Lógica</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/CPRL-Compiler-Suite" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/CPRL-Compiler-Suite" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -297,24 +317,25 @@
                             <h3>AppNoticias</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Aplicativo acadêmico desenvolvido para consumo, filtragem e exibição de feeds de notícias em tempo real através da integração com APIs estruturadas.</p>
+                            <p class="small text-secondary">Aplicativo acadêmico desenvolvido para consumo, filtragem e exibição de feeds de notícias em tempo real através da integração com APIs estruturadas.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Mobile</span>
-                                <span class="badge rounded-pill bg-primary-subtle text-primary">API Integration</span>
+                                <span class="badge rounded-pill bg-primary-subtle text-primary">API</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/AppNoticias" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/AppNoticias" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="project-card future h-100 p-4">
-                        <i class="fas fa-plus-circle fa-2x text-muted"></i>
-                        <h3 class="text-muted">+ Projetos Futuramente</h3>
+                    <div class="project-card future h-100 p-4 d-flex flex-column align-items-center justify-content-center text-center">
+                        <i class="fas fa-plus-circle fa-2x text-muted mb-2"></i>
+                        <h3 class="text-muted h5 m-0">+ Projetos Futuramente</h3>
                     </div>
                 </div>
             </div>
 
+            <!-- Início da Jornada -->
             <h3 class="category-title mb-4 mt-5"><i class="fas fa-rocket me-2"></i> Início da Jornada</h3>
             <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-4">
@@ -325,12 +346,12 @@
                             <h3>Estudos em C</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Repositório dedicado ao aprendizado da linguagem C, cobrindo lógica e memória.</p>
+                            <p class="small text-secondary">Repositório dedicado ao aprendizado da linguagem C, cobrindo lógica e memória.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">C</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Lógica</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Linguagem-C" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Linguagem-C" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -343,12 +364,12 @@
                             <h3>Estudos em Java</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Coleção de exercícios e pequenos projetos focados na sintaxe Java.</p>
+                            <p class="small text-secondary">Coleção de exercícios e pequenos projetos focados na sintaxe Java.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Java</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Backend</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/Java" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/Java" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -361,12 +382,12 @@
                             <h3>Meu Primeiro Projeto</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">O marco inicial. Primeiros passos e experimentos com código.</p>
+                            <p class="small text-secondary">O marco inicial. Primeiros passos e experimentos com código.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">C</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Java</span>
                             </div>
-                            <a href="https://github.com/DaviP-Conceicao/MEU-PRIMEIRO-PROJECT" target="_blank" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="https://github.com/DaviP-Conceicao/MEU-PRIMEIRO-PROJECT" target="_blank" rel="noopener noreferrer" class="link small fw-bold">Ver no GitHub <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -374,15 +395,13 @@
         </div>
     </section>
 
-  
-   <section id="pesquisa" class="section py-5">
+   <section id="pesquisa" class="section py-5 fade-in-section">
         <div class="container text-center">
             <h2 class="section-title mb-3">Produção Científica & Artigos</h2>
-            <p class="mb-5">Meus estudos teóricos, pesquisas e preparações acadêmicas.</p>
+            <p class="mb-5 text-secondary">Meus estudos teóricos, pesquisas e preparações acadêmicas.</p>
          
             <div class="row g-4 text-start">
                 
-               
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card h-100 p-4">
                         <div class="card-header border-0 bg-transparent p-0">
@@ -391,18 +410,16 @@
                             <h3>A Leitura Mediada no Ambiente Familiar</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Pesquisa estruturada em LaTeX que investiga o impacto da afetividade na alfabetização infantil. O estudo propõe o uso de algoritmos lógicos e gamificação para engajar as crianças na era digital.</p>
+                            <p class="small text-secondary">Pesquisa estruturada em LaTeX que investiga o impacto da afetividade na alfabetização infantil. O estudo propõe o uso de algoritmos lógicos e gamificação para engajar as crianças na era digital.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">LaTeX</span>
-                                <span class="badge rounded-pill bg-primary-subtle text-primary">Metodologia Científica</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">IA</span>
                             </div>
-                            <a href="assets/img/pdfs/Pesquisa-bibliografica.pdf" target="_blank" class="link fw-bold small">Ler Pesquisa (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="assets/img/pdfs/Pesquisa-bibliografica.pdf" target="_blank" rel="noopener noreferrer" class="link fw-bold small">Ler Pesquisa (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
 
-              
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card h-100 p-4">
                         <div class="card-header border-0 bg-transparent p-0">
@@ -411,17 +428,16 @@
                             <h3>Predição de Vida Útil de Baterias</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Abordagem baseada em Aprendizado de Máquina para estimar o Estado de Saúde (SoH) de baterias de íons de lítio. Este estudo prático terá continuação futuramente na minha matéria de Ciência de Dados.</p>
+                            <p class="small text-secondary">Abordagem baseada em Aprendizado de Máquina para estimar o Estado de Saúde (SoH) de baterias de íons de lítio. Este estudo prático terá continuação futuramente na minha matéria de Ciência de Dados.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Machine Learning</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Ciência de Dados</span>
                             </div>
-                            <a href="assets/img/pdfs/Artigo-Baterias.pdf" target="_blank" class="link fw-bold small">Ler Artigo (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="assets/img/pdfs/Artigo-Baterias.pdf" target="_blank" rel="noopener noreferrer" class="link fw-bold small">Ler Artigo (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
 
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card h-100 p-4">
                         <div class="card-header border-0 bg-transparent p-0">
@@ -430,17 +446,16 @@
                             <h3>Redes Neurais Profundas</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Relatório técnico da disciplina de Visão Computacional, detalhando os mecanismos essenciais de otimização de IA, com foco em Backpropagation e Gradiente Descendente.</p>
+                            <p class="small text-secondary">Relatório técnico da disciplina de Visão Computacional, detalhando os mecanismos essenciais de otimização de IA, com foco em Backpropagation e Gradiente Descendente.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Deep Learning</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Visão Computacional</span>
                             </div>
-                            <a href="assets/img/pdfs/Relatorio-VISC.pdf" target="_blank" class="link fw-bold small">Ler Relatório (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="assets/img/pdfs/Relatorio-VISC.pdf" target="_blank" rel="noopener noreferrer" class="link fw-bold small">Ler Relatório (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
 
-                
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card h-100 p-4">
                         <div class="card-header border-0 bg-transparent p-0">
@@ -449,12 +464,12 @@
                             <h3>Projeto Final Técnico - Arcade Fight</h3>
                         </div>
                         <div class="card-body p-0 mt-3">
-                            <p class="small">Relatório técnico de conclusão do curso técnico focando no desenvolvimento completo de uma estação de Arcade integrado a sistemas operacionais e arquitetura física de hardware.</p>
+                            <p class="small text-secondary">Relatório técnico de conclusão do curso técnico focando no desenvolvimento completo de uma estação de Arcade integrado a sistemas operacionais e arquitetura física de hardware.</p>
                             <div class="tech-stack mb-3">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Hardware</span>
                                 <span class="badge rounded-pill bg-primary-subtle text-primary">Sistemas Operacionais</span>
                             </div>
-                            <a href="assets/img/pdfs/Relatorio-ProjetoFinal-Tecnico-Arcade.pdf" target="_blank" class="link fw-bold small">Ler Relatório (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="assets/img/pdfs/Relatorio-ProjetoFinal-Tecnico-Arcade.pdf" target="_blank" rel="noopener noreferrer" class="link fw-bold small">Ler Relatório (PDF) <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -463,40 +478,40 @@
         </div>
     </section>
 
-   <section id="certificados" class="section bg-alt py-5">
+   <section id="certificados" class="section bg-alt py-5 fade-in-section">
         <div class="container">
             <h2 class="section-title text-center mb-3">Certificados & Documentos</h2>
-            <p class="text-center mb-5">Clique para visualizar os certificados oficiais.</p>
+            <p class="text-center mb-5 text-secondary">Clique para visualizar os certificados oficiais.</p>
             
             <h3 class="category-title mb-4"><i class="fas fa-certificate me-2"></i> Cursos & Eventos</h3>
             <div class="row g-4 justify-content-center">
                 
                 <div class="col-md-6 col-lg-4">
-                    <a href="assets/img/pdfs/certificado-caixa-ia.pdf" target="_blank" class="cert-card d-flex align-items-center p-3 text-decoration-none h-100">
+                    <a href="assets/img/pdfs/certificado-caixa-ia.pdf" target="_blank" rel="noopener noreferrer" class="cert-card d-flex align-items-center p-3 text-decoration-none h-100">
                         <i class="fas fa-robot fa-2x text-danger me-3"></i>
                         <div class="cert-info">
                             <h4 class="h6 mb-1">Inteligência Artificial na Prática</h4>
-                            <span class="small">Bootcamp CAIXA | DIO (28h)</span>
+                            <span class="small text-secondary">Bootcamp CAIXA | DIO (28h)</span>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <a href="assets/img/pdfs/certificado-hackathon.pdf" target="_blank" class="cert-card d-flex align-items-center p-3 text-decoration-none h-100">
+                    <a href="assets/img/pdfs/certificado-hackathon.pdf" target="_blank" rel="noopener noreferrer" class="cert-card d-flex align-items-center p-3 text-decoration-none h-100">
                         <i class="fas fa-users fa-2x text-danger me-3"></i>
                         <div class="cert-info">
                             <h4 class="h6 mb-1">Hackathon 6.0 Connect</h4>
-                            <span class="small">Inovação e Conexão (20h)</span>
+                            <span class="small text-secondary">Inovação e Conexão (20h)</span>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <a href="assets/img/pdfs/certificado-secad.pdf" target="_blank" class="cert-card d-flex align-items-center p-3 text-decoration-none h-100">
+                    <a href="assets/img/pdfs/certificado-secad.pdf" target="_blank" rel="noopener noreferrer" class="cert-card d-flex align-items-center p-3 text-decoration-none h-100">
                         <i class="fas fa-fighter-jet fa-2x text-danger me-3"></i>
                         <div class="cert-info">
                             <h4 class="h6 mb-1">SECAD 2026</h4>
-                            <span class="small">Seminário Estratégico da Cadeia Aeroespacial e Defesa</span>
+                            <span class="small text-secondary">Seminário Estratégico da Cadeia Aeroespacial e Defesa</span>
                         </div>
                     </a>
                 </div>
@@ -505,12 +520,12 @@
         </div>
     </section>
 
-    <section id="contato" class="section py-5">
+    <section id="contato" class="section py-5 fade-in-section">
         <div class="container text-center">
             <h2 class="section-title mb-4">Vamos Conversar?</h2>
-            <p class="lead mb-4">Estou sempre aberto a novas conexões, projetos e oportunidades.</p>
+            <p class="lead mb-4 text-secondary">Estou sempre aberto a novas conexões, projetos e oportunidades.</p>
             <div class="d-flex gap-3 justify-content-center flex-wrap">
-                <a href="https://www.linkedin.com/in/davi-paulino-concei%C3%A7%C3%A3o-5b97b92ba/" target="_blank" class="btn btn-primary px-4 py-2">
+                <a href="https://www.linkedin.com/in/davi-paulino-concei%C3%A7%C3%A3o-5b97b92ba/" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4 py-2">
                     <i class="fab fa-linkedin me-2"></i> LinkedIn
                 </a>
                 <a href="mailto:davi.paulino@aluno.ifsp.edu.br" class="btn btn-outline-light px-4 py-2">
@@ -522,7 +537,7 @@
 
     <footer class="py-4 border-top border-secondary text-center">
         <div class="container">
-            <p class="small mb-0">&copy; 2026 Davi Paulino.</p>
+            <p class="small mb-0 text-secondary">&copy; 2026 Davi Paulino.</p>
         </div>
     </footer>
 
