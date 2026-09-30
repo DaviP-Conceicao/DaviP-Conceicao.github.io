@@ -36,16 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-   
 
+document.addEventListener('DOMContentLoaded', () => {
     const btnOpenModal = document.getElementById('btnOpenModalEnem');
     const modalEnem = document.getElementById('modalEnem');
     const btnCloseModal = document.getElementById('btnCloseModalEnem');
 
     if (btnOpenModal && modalEnem && btnCloseModal) {
-        
-
         btnOpenModal.addEventListener('click', (e) => {
             e.preventDefault(); 
             modalEnem.classList.add('active');
@@ -56,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modalEnem.classList.remove('active');
             document.body.style.overflow = 'auto'; 
         });
-
 
         modalEnem.addEventListener('click', (e) => {
             if (e.target === modalEnem) {
