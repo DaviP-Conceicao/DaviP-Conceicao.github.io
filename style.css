@@ -1,8 +1,7 @@
-
 :root {
     --primary-color: #0d6efd;
-    --bg-alt: rgba(255, 255, 255, 0.03); 
-    --card-bg: #212529; 
+    --bg-alt: rgba(255, 255, 255, 0.03);
+    --card-bg: #212529;
     --card-border: #495057;
     --transition: 0.3s ease;
 }
@@ -13,10 +12,9 @@ html {
 
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    font-size: 1.15rem; 
+    font-size: 1.15rem;
     line-height: 1.6;
 }
-
 
 .custom-navbar {
     background-color: rgba(33, 37, 41, 0.95);
@@ -29,10 +27,9 @@ body {
     color: var(--primary-color) !important;
 }
 
-
 .hero {
     min-height: 100vh;
-    padding-top: 80px; 
+    padding-top: 80px;
 }
 
 .highlight {
@@ -51,7 +48,6 @@ body {
     font-size: 1.4rem;
     line-height: 1.7;
 }
-
 
 .section {
     position: relative;
@@ -74,7 +70,6 @@ body {
     padding-bottom: 0.5rem;
     display: inline-block;
 }
-
 
 .project-card {
     background-color: var(--card-bg);
@@ -101,49 +96,49 @@ body {
     box-shadow: none;
 }
 
-
 .project-card h3 {
-    font-size: 1.7rem !important; 
+    font-size: 1.7rem !important;
     font-weight: 600;
     margin-bottom: 0.8rem;
 }
 
 .project-type {
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #adb5bd;
     font-weight: 500;
 }
 
-
-.project-card p.small,
-.cert-card p.small,
-.project-card .small {
-    font-size: 1.1rem !important; 
+.project-card p.small, .cert-card p.small, .project-card .small {
+    font-size: 1.1rem !important;
     line-height: 1.6 !important;
-    color: #ced4da !important; 
+    color: #ced4da !important;
 }
 
+/* Garante o rácio e o aspeto da imagem na nova secção IA */
+.card-image img {
+    object-position: center;
+    border-radius: 6px;
+    transition: opacity var(--transition);
+}
 
 .tech-stack .badge {
-    font-size: 0.95rem !important; 
+    font-size: 0.95rem !important;
     padding: 0.5em 0.9em !important;
     font-weight: 500;
 }
 
-
 .link {
     text-decoration: none;
     color: var(--primary-color);
-    font-size: 1.05rem !important; 
+    font-size: 1.05rem !important;
     transition: opacity var(--transition);
 }
 
 .link:hover {
     opacity: 0.8;
 }
-
 
 .cert-card {
     background-color: var(--card-bg);
@@ -165,7 +160,6 @@ body {
     font-size: 1.3rem;
 }
 
-
 .fade-in-section {
     opacity: 0;
     transform: translateY(30px);
@@ -176,4 +170,142 @@ body {
 .fade-in-section.is-visible {
     opacity: 1;
     transform: none;
+}
+
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-modal-content {
+    background-color: var(--card-bg); 
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    width: 92%;
+    max-width: 900px;
+    max-height: 90vh; 
+    overflow-y: auto;
+    padding: 2.5rem;
+    position: relative;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.custom-modal-overlay.active .custom-modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: #adb5bd;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.close-modal:hover {
+    color: #dc3545; 
+}
+
+.modal-title {
+    color: #f8f9fa;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding-right: 40px; 
+}
+
+.modal-divider {
+    border-color: var(--card-border);
+    margin-bottom: 2.5rem;
+}
+
+.modal-block {
+    margin-bottom: 3.5rem;
+}
+
+.modal-block h3 {
+    color: var(--primary-color);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.modal-block p {
+    color: #ced4da;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.modal-block img {
+    background-color: #1a1d20;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.modal-cta .btn-success {
+    background-color: #198754;
+    border: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.modal-cta .btn-success:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+
+.custom-modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+.custom-modal-content::-webkit-scrollbar-track {
+    background: #1a1d20;
+    border-radius: 0 12px 12px 0;
+}
+.custom-modal-content::-webkit-scrollbar-thumb {
+    background: #495057;
+    border-radius: 10px;
+    border: 2px solid #1a1d20;
+}
+.custom-modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .custom-modal-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    .modal-title {
+        font-size: 1.4rem;
+    }
+    .modal-cta .btn-success {
+        font-size: 1rem;
+        padding: 10px 15px;
+        white-space: normal;
+    }
 }
