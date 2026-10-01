@@ -69,3 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const vfScript = document.createElement('script');
+    vfScript.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+    vfScript.type = 'text/javascript';
+    vfScript.onload = () => {
+        window.voiceflow.chat.load({
+            verify: { projectID: '6abd2b1ac2c0d5ecb6cbfbb1' },
+            url: 'https://general-runtime.voiceflow.com',
+            voice: { url: 'https://runtime-api.voiceflow.com' }
+        });
+    };
+    document.body.appendChild(vfScript);
+
+    document.addEventListener('click', (event) => {
+        const trigger = event.target.closest('#btnOpenAIAgentBottom, #btnOpenAIAgent');
+        if (!trigger) return;
+
+        event.preventDefault();
+        if (window.voiceflow && window.voiceflow.chat) {
+            window.voiceflow.chat.open();
+        }
+    });
+});

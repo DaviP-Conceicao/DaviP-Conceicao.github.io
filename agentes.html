@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de IA & Agentes Autônomos | Davi Paulino</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">DaviPaulino.dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#ia">Soluções IA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#pesquisa">Pesquisa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#certificados">Certificados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-5 mt-5 pb-4 text-center fade-in-section">
+        <div class="container pt-4">
+            <span class="project-type d-block mb-3">Hub Central</span>
+            <h1 class="display-5 fw-bold">Laboratório de <span class="highlight">IA & Agentes Autônomos</span></h1>
+            <p class="lead text-secondary max-w-custom mx-auto">
+                Este é o espaço onde desenvolvo e testo meus assistentes virtuais, desde agentes já funcionais
+                até protótipos em construção.
+            </p>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="agentes" class="section bg-alt py-5 fade-in-section">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card h-100 p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <i class="fas fa-file-signature fa-2x text-primary"></i>
+                                <span class="badge rounded-pill text-bg-success">Ativo / MVP</span>
+                            </div>
+                            <span class="project-type d-block mb-2">Assistente Educacional</span>
+                            <h3>Corretor Redação ENEM</h3>
+                            <p class="small text-secondary mb-4">Avaliação automatizada baseada nas 5 competências do Inep.</p>
+                            <!-- Abre o widget do Voiceflow (carregado pelo script.js) -->
+                            <button type="button" id="btnOpenAIAgent" class="btn btn-primary btn-sm w-100 fw-bold mt-auto">
+                                <i class="fas fa-comments me-1"></i> Acessar Agente
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card future h-100 p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <i class="fas fa-code fa-2x text-primary"></i>
+                                <span class="badge rounded-pill text-bg-warning">Em Desenvolvimento</span>
+                            </div>
+                            <span class="project-type d-block mb-2">Desenvolvimento</span>
+                            <h3>Assistente de Programação</h3>
+                            <p class="small text-secondary mb-4">Focado em refatoração, debug de banco de dados e arquitetura Java/DAO.</p>
+                            <button type="button" class="btn btn-outline-secondary btn-sm w-100 fw-bold mt-auto" disabled>Em breve</button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card future h-100 p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <i class="fas fa-sack-dollar fa-2x text-primary"></i>
+                                <span class="badge rounded-pill text-bg-warning">Em Desenvolvimento</span>
+                            </div>
+                            <span class="project-type d-block mb-2">Finanças</span>
+                            <h3>Consultor Financeiro</h3>
+                            <p class="small text-secondary mb-4">Assistente pragmático para organização de orçamentos e simulações.</p>
+                            <button type="button" class="btn btn-outline-secondary btn-sm w-100 fw-bold mt-auto" disabled>Em breve</button>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card future h-100 p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <i class="fas fa-masks-theater fa-2x text-primary"></i>
+                                <span class="badge rounded-pill text-bg-warning">Em Desenvolvimento</span>
+                            </div>
+                            <span class="project-type d-block mb-2">Criatividade</span>
+                            <h3>Assistente de Personagem</h3>
+                            <p class="small text-secondary mb-4">IA voltada para roleplay, desenvolvimento de backstory e ensaio de roteiros teatrais.</p>
+                            <button type="button" class="btn btn-outline-secondary btn-sm w-100 fw-bold mt-auto" disabled>Em breve</button>
+                        </article>
+                    </div>
+
+      
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card future h-100 p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <i class="fab fa-markdown fa-2x text-primary"></i>
+                                <span class="badge rounded-pill text-bg-warning">Em Desenvolvimento</span>
+                            </div>
+                            <span class="project-type d-block mb-2">Documentação</span>
+                            <h3>Estruturador de Prompts Markdown</h3>
+                            <p class="small text-secondary mb-4">Ferramenta técnica para gerar respostas parametrizadas e documentação limpa.</p>
+                            <button type="button" class="btn btn-outline-secondary btn-sm w-100 fw-bold mt-auto" disabled>Em breve</button>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="index.html#ia" class="btn btn-outline-light px-4 py-2">
+                        <i class="fas fa-arrow-left me-2"></i> Voltar ao Portfólio
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 border-top border-secondary text-center">
+        <div class="container">
+            <p class="small mb-0 text-secondary">&copy; 2026 Davi Paulino.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
